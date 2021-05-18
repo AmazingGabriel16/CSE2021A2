@@ -1,0 +1,36 @@
+<!--Results for all games my team played this season-->
+
+<div class="rounded border-outline-light">
+    <form>
+        <p>Results for games of teams played this season</p>
+        Team name*: <input [(ngModel)]="teamName" name="teamName">
+        <span class="col-1"></span>
+        Season(Year)*: <input [(ngModel)]="gameYear" name="gameYear">
+        <span class="col-1"></span>
+        <button class="btn rounded" (click)="getGames()">Filter</button>
+    </form>
+</div>
+
+<div class="top-50 start-50 px-2 py-2 border-primary">
+    <div *ngIf = "team">
+        <table sytle = "text-align: center;">
+            <tr>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Score</th>
+                <th>Winner</th>
+                <th>Venue</th>
+                <th>Year</th>
+            </tr>
+
+            <tr *ngFor ="let game of games">
+                <td>{{game.hteam}}</td>
+                <td>{{game.ateam}}</td>
+                <td>{{game.hscore}}-{{game.ascore}}</td>
+                <td>{{game.winner}}</td>
+                <td>{{game.venue}}</td>
+                <td>{{game.year}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

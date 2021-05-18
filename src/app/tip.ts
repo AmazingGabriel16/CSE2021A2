@@ -20,6 +20,6 @@ export class Tip {
         public updated:string,
         public hconfidence:string,  
 		public gameid:number,	
-		public hmargin:string  
+		public hmargin:string       
 	){}
 }
