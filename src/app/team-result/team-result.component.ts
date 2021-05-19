@@ -12,6 +12,7 @@ import { DataService } from '../data.service';
 export class TeamResultComponent implements OnInit {
 
   games!:Game[];
+  teams!:Team[];
   @Input() team!: Team;
   teamName = null;
   gameYear = null;
